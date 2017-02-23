@@ -1,5 +1,5 @@
 <resources>
-
+<!--для підтримки андроїда 5 і вище-->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar" />
     <!-- Base application theme. -->
     <style name="AppDefault" parent="AppTheme">
@@ -10,9 +10,8 @@
         <!--<item name="windowActionBar">false</item>-->
         <item name="colorControlNormal">@color/colorWhite</item>
 
-        <!-- не підтримується нижче 5 го андроїда
         <item name="android:statusBarColor">@android:color/transparent</item>
-        -->
+
     </style>
 
 </resources>
