@@ -46,13 +46,15 @@
 
         <!--Кругла кнопка з плюсиком внизу екрану-->
         <android.support.design.widget.FloatingActionButton
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:id="@+id/floating_action_button"
             android:src="@mipmap/ic_plus"
             android:layout_gravity="bottom|end"
             android:layout_marginBottom="@dimen/floating_action_button"
-            android:layout_marginRight="@dimen/floating_action_button"/>
+            android:layout_marginRight="@dimen/floating_action_button"
+            app:backgroundTint="@color/colorPrimary"/>
 
     </android.support.design.widget.CoordinatorLayout>
 
