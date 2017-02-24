@@ -1,6 +1,5 @@
 package com.example.bloom.remindme;
 
-import android.app.Activity; // раніше наслідувався від нього
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -11,9 +10,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 
-import com.example.bloom.remindme.adapter.TabsPagerFragmentAdapter;
+import com.example.bloom.remindme.adapter.TabsFragmentAdapter;
 
 /**
  * Created by Bloom on 21.02.2017.
@@ -63,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);
 
-        TabsPagerFragmentAdapter adapter = new TabsPagerFragmentAdapter(getSupportFragmentManager());
+        TabsFragmentAdapter adapter = new TabsFragmentAdapter(this ,getSupportFragmentManager());
         /**вкладки*/
         viewPager.setAdapter(adapter);
         /**перев'язка*/
@@ -77,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.view_navigation_open, R.string.view_navigation_close);
         drawerLayout.setDrawerListener(toggle);
         toggle.syncState();
-
+        /**перехід із меню зліва на відповідну вкладку*/
         NavigationView navigationView = (NavigationView) findViewById(R.id.navigation);
         navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener(){
 

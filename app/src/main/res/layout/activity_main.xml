@@ -20,7 +20,8 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?actionBarSize"
-                android:background="?colorPrimary"/>
+                android:background="?colorPrimary"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark"/>
             <!--раніше підключалося ззовні-->
             <!--<include android:id="@+id/toolbar"
                layout="@layout/toolbar" />-->
@@ -42,6 +43,16 @@
             android:layout_width="wrap_content"
             android:id="@+id/view_pager"
             app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+        <!--Кругла кнопка з плюсиком внизу екрану-->
+        <android.support.design.widget.FloatingActionButton
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/floating_action_button"
+            android:src="@mipmap/ic_plus"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="@dimen/floating_action_button"
+            android:layout_marginRight="@dimen/floating_action_button"/>
 
     </android.support.design.widget.CoordinatorLayout>
 
